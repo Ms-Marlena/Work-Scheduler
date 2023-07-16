@@ -2,67 +2,125 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
-
+  //display current date
   document.getElementById("currentDay").innerHTML = dayjs().format(
-    "dddd[, ] MMMM D[, ] YYYY");
-  
-    var saveButtonEl = $('.saveBtn');
-  // saveButtonEl.on("click", function () {
-  //   console.log("save button pressed");
-  //   alert("This is the save button!")
-  // });
+    "dddd[, ] MMMM D[, ] YYYY"
+  );
 
-  saveButtonEl.on("click", function (event) {
+  //target saveButton
+  var saveButton9am = $("#hour-9").children().eq(2);
+  //
+  saveButton9am.on("click", function (event) {
     event.preventDefault();
-    var descriptionEl = $(".description").val();
-    localStorage.setItem("text", $(".description").val());
+    var descriptionEl = $(this).prev().val();
+    localStorage.setItem("text9", descriptionEl);
     console.log(descriptionEl);
-    alert("Input saved!")
+    alert("Input saved!");
   });
+  //display info from local storage
+  document.getElementById("9amTxt").innerHTML = localStorage.getItem("text9");
 
-  localStorage.getItem("text");
-  
-  }); 
-  
-
-// saveButtonEl.on("click", function () {
-  
-//   localStorage.setItem("text", JSON.stringify(descriptionEl));
-//   console.log(descriptionEl);
-// });
-
-descriptionEl.on("click", function () {
-  alert("This is the description box");
-  console.log("text box pressed");
-});
-
-  
-// $("button").on("click", ".saveBtn", function (event) {
-//   const timeBlock = $(event.target).parent();
-//   console.log(timeBlock);
-  
-//   // localStorage.setItem("text:", "#plannerText");
-// });
-
-
-
-
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
+  //target saveButton
+  var saveButton10am = $("#hour-10").children().eq(2);
   //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
+  saveButton10am.on("click", function (event) {
+    event.preventDefault();
+    var descriptionEl = $(this).prev().val();
+    localStorage.setItem("text10", descriptionEl);
+    console.log(descriptionEl);
+    alert("Input saved!");
+  });
+  //display info from local storage
+  document.getElementById("10amTxt").innerHTML = localStorage.getItem("text10");
+
+  //target saveButton
+  var saveButton11am = $("#hour-11").children().eq(2);
   //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
+  saveButton11am.on("click", function (event) {
+    event.preventDefault();
+    var descriptionEl = $(this).prev().val();
+    localStorage.setItem("text11", descriptionEl);
+    console.log(descriptionEl);
+    alert("Input saved!");
+  });
+  //display info from local storage
+  document.getElementById("11amTxt").innerHTML = localStorage.getItem("text11");
 
+  //target saveButton
+  var saveButton12pm = $("#hour-12").children().eq(2);
+  //
+  saveButton12pm.on("click", function (event) {
+    event.preventDefault();
+    var descriptionEl = $(this).prev().val();
+    localStorage.setItem("text12", descriptionEl);
+    console.log(descriptionEl);
+    alert("Input saved!");
+  });
+  //display info from local storage
+  document.getElementById("12pmTxt").innerHTML = localStorage.getItem("text12");
 
-});
+  //target saveButton
+  var saveButton1pm = $("#hour-1").children().eq(2);
+  //
+  saveButton1pm.on("click", function (event) {
+    event.preventDefault();
+    var descriptionEl = $(this).prev().val();
+    localStorage.setItem("text1", descriptionEl);
+    console.log(descriptionEl);
+    alert("Input saved!");
+  });
+  //display info from local storage
+  document.getElementById("1pmTxt").innerHTML = localStorage.getItem("text1");
+
+  //target saveButton
+  var saveButton2pm = $("#hour-2").children().eq(2);
+  //
+  saveButton2pm.on("click", function (event) {
+    event.preventDefault();
+    var descriptionEl = $(this).prev().val();
+    localStorage.setItem("text2", descriptionEl);
+    console.log(descriptionEl);
+    alert("Input saved!");
+  });
+  //display info from local storage
+  document.getElementById("2pmTxt").innerHTML = localStorage.getItem("text2");
+
+  //target saveButton
+  var saveButton3pm = $("#hour-3").children().eq(2);
+  //
+  saveButton3pm.on("click", function (event) {
+    event.preventDefault();
+    var descriptionEl = $(this).prev().val();
+    localStorage.setItem("text3", descriptionEl);
+    console.log(descriptionEl);
+    alert("Input saved!");
+  });
+  //display info from local storage
+  document.getElementById("3pmTxt").innerHTML = localStorage.getItem("text3");
+
+  //target saveButton
+  var saveButton4pm = $("#hour-4").children().eq(2);
+  //
+  saveButton4pm.on("click", function (event) {
+    event.preventDefault();
+    var descriptionEl = $(this).prev().val();
+    localStorage.setItem("text4", descriptionEl);
+    console.log(descriptionEl);
+    alert("Input saved!");
+  });
+  //display info from local storage
+  document.getElementById("4pmTxt").innerHTML = localStorage.getItem("text4");
+
+  //target saveButton
+  var saveButton5pm = $("#hour-5").children().eq(2);
+  //
+  saveButton5pm.on("click", function (event) {
+    event.preventDefault();
+    var descriptionEl = $(this).prev().val();
+    localStorage.setItem("text5", descriptionEl);
+    console.log(descriptionEl);
+    alert("Input saved!");
+  });
+  //display info from local storage
+  document.getElementById("5pmTxt").innerHTML = localStorage.getItem("text5");
+}); 
