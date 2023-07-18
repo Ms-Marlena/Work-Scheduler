@@ -15,7 +15,7 @@ Install the dependencies and load the webpage.
 ## Usage
 Type in your to-do items in the correct time block, then click the button to the right of that block (with the save icon).
 
-    ![picture of scheduler](./assets/screenshot.png)
+![picture of scheduler](./assets/screenshot.png)
 ## Credits
 Tutorials: 
 <a href=https://youtu.be/mg2PHGHPFlU>How to retrieve values with jQuery</a> by codebubb on Youtube
